@@ -35,4 +35,9 @@ pipeline {
             }
         }
 	}
+	post{
+		success{
+			emailext body: 'Build Success', subject: 'Status of Build', to: 'sandhiraghuvaran@gmail.com'
+		}
+	}
 }
